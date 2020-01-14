@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "03aa19c2-91ff-43b7-bf33-35c0953b9b17",
+		"name": "poc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin2",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1980-01-05",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "link",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDlkMTcyMGMzYzA3ODViZDA5ZWJiYzIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkWGlZMjE5aVN3WGg5ZTJlZkx0ek1IZVFyVWp6aXY2NHE5WTFPWjFVbWo0THJmSEFuOXNOZnkiLCJuYW1lIjoidGVzdCIsImltYWdlIjoiYXNkYXNkYXNkZGFzIiwiaWF0IjoxNTcwNTg5MjMzLCJleHAiOjE1NzA2NzU2MzN9.Sz3hMauFnPJjDaIrWGpJyoRtC71q_7J02RmTJKFWKg8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/students",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDlkMTcyMGMzYzA3ODViZDA5ZWJiYzIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkWGlZMjE5aVN3WGg5ZTJlZkx0ek1IZVFyVWp6aXY2NHE5WTFPWjFVbWo0THJmSEFuOXNOZnkiLCJuYW1lIjoidGVzdCIsImltYWdlIjoiYXNkYXNkYXNkZGFzIiwiaWF0IjoxNTcwNTg5MjMzLCJleHAiOjE1NzA2NzU2MzN9.Sz3hMauFnPJjDaIrWGpJyoRtC71q_7J02RmTJKFWKg8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/students/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"students",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDlkMTcyMGMzYzA3ODViZDA5ZWJiYzIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkWGlZMjE5aVN3WGg5ZTJlZkx0ek1IZVFyVWp6aXY2NHE5WTFPWjFVbWo0THJmSEFuOXNOZnkiLCJuYW1lIjoidGVzdCIsImltYWdlIjoiYXNkYXNkYXNkZGFzIiwiaWF0IjoxNTcwNTg5MjMzLCJleHAiOjE1NzA2NzU2MzN9.Sz3hMauFnPJjDaIrWGpJyoRtC71q_7J02RmTJKFWKg8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin2",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1995-10-29",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "asdasdasddas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/students",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDlkMTcyMGMzYzA3ODViZDA5ZWJiYzIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkWGlZMjE5aVN3WGg5ZTJlZkx0ek1IZVFyVWp6aXY2NHE5WTFPWjFVbWo0THJmSEFuOXNOZnkiLCJuYW1lIjoidGVzdCIsImltYWdlIjoiYXNkYXNkYXNkZGFzIiwiaWF0IjoxNTcwNTg5MjMzLCJleHAiOjE1NzA2NzU2MzN9.Sz3hMauFnPJjDaIrWGpJyoRtC71q_7J02RmTJKFWKg8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "renamed",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2000-12-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/students/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"students",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDlkMTcyMGMzYzA3ODViZDA5ZWJiYzIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkWGlZMjE5aVN3WGg5ZTJlZkx0ek1IZVFyVWp6aXY2NHE5WTFPWjFVbWo0THJmSEFuOXNOZnkiLCJuYW1lIjoidGVzdCIsImltYWdlIjoiYXNkYXNkYXNkZGFzIiwiaWF0IjoxNTcwNTg5MjMzLCJleHAiOjE1NzA2NzU2MzN9.Sz3hMauFnPJjDaIrWGpJyoRtC71q_7J02RmTJKFWKg8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/students/admin2",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"students",
+						"admin2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

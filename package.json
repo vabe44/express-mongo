@@ -1,0 +1,17 @@
+{
+  "name": "express-mongo-poc",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "dotenv": "^8.1.0",
+    "express": "~4.13.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.2"
+  }
+}
